@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: twmj009p4-python-gitops
+  description: This is GitOps manifest for twmj009p4-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=twmj009p4-python
+    backstage.io/kubernetes-id: twmj009p4-python 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: chetna14manku-org/twmj009p4-python-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:twmj009p4-python
